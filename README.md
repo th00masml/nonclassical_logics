@@ -151,6 +151,52 @@ Python 3.10+. Core logic evaluators have no external dependencies. Notebook 07 r
 
 ---
 
+Ideas for future work
+New logics to add
+
+Probabilistic logic / Nilsson (1986) — assign probabilities to classical sentences and propagate via linear programming; natural bridge between LP/possibilistic and full Bayesian reasoning. Interesting comparison point for notebook 03 benchmarks.
+Conditional logic (Stalnaker / Lewis) — φ > ψ ("if φ were the case, ψ would hold") interpreted over similarity-ordered worlds. Relevant for counterfactual reasoning in chatbot retraction (notebook 04 §6) and implicature (notebook 05 §4).
+Description logics (ALC, EL, OWL) — the logical backbone of knowledge graphs. Would fit naturally into the retrieval-grounding stage of the pipeline (notebook 06 §2) as a typed ontology layer on top of intuitionistic witnesses.
+Hybrid logic — adds nominals (names for specific worlds) to modal logic; @_i φ means "at world i, φ holds". Useful when agents need to reason about specific named situations, not just possible ones.
+Separation logic — extends Hoare logic with * (separating conjunction) for reasoning about disjoint memory regions. Could replace or complement linear logic in the smart-contract scenario (notebook 04 §4).
+Rough set logic — approximation spaces with lower/upper bounds on set membership; complementary to fuzzy for discrete, categorical uncertainty rather than graded.
+
+Extensions to existing notebooks
+Notebook 03 (Synthesis)
+
+Add a third benchmark scenario: conflicting temporal reports (two agents disagree about when an event happened, not just whether). Would bring LTL and CTL into the cross-logic comparison.
+Quantitative noise sweep: currently checks agreement at fixed conflict level; vary the conflict rate from 0% to 100% and plot how each logic's "survival rate" degrades. Reveals which logics are robust vs. brittle.
+
+Notebook 04 (Applications)
+
+Rover scenario (§7): replace CTL with ATL to model two competing rovers each trying to satisfy their own mission spec — coalition quantifier <<C>> makes the adversarial aspect explicit.
+Legal referents (§9): extend free logic scenario to partial denotation (a term denotes in some worlds but not others), bridging free logic and modal logic.
+
+Notebook 05 (Language)
+
+Test the grounded QA / intuitionistic RAG scenario (§10) against a real retrieval pipeline (FAISS + small LM) and measure hallucination rate with vs. without witness requirement.
+Add a section on scalar implicature (default logic + Łukasiewicz): "some students passed" implicates "not all"; default rule fires unless explicitly blocked by "in fact, all did".
+
+Notebook 06 / 07 (Pipeline)
+
+Add a confidence-threshold router between fuse_evidence and decide: if possibilistic weight drops below a tunable threshold, route directly to escalation without going through subjective aggregation. Makes the pipeline adaptive.
+Swap out the toy retriever in retrieve_with_witness for a real one (ChromaDB / FAISS) and measure end-to-end latency and refusal rate on a small QA dataset.
+Benchmark the LangGraph version (notebook 07) against a flat-function baseline (notebook 06) on throughput and correctness — does the graph overhead pay off at scale?
+
+Experimental composition (notebook 08 extensions)
+
+Experiment 7: AGM revision under fuzzy evidence — what is the right revision policy when the incoming evidence is itself a fuzzy degree rather than a crisp formula? Does the Levi identity still hold?
+Experiment 8: Default logic inside a DEL action model — can a private announcement trigger or block a default? Tests whether the pipeline's stage-isolation assumption holds when events are not public.
+Experiment 9: Linear logic resources consumed by epistemic updates — model the cognitive cost of learning as a consumable resource; !K_i φ (reusable knowledge) vs. K_i φ (one-shot information). Connects subjective logic uncertainty to resource accounting.
+Composition laws summary table — each experiment currently ends with an ad hoc observation; consolidate into a matrix (Logic A) × (Logic B) → {safe | requires new type | degenerates to classical | explodes}.
+
+Testing and evaluation
+
+Property-based tests (Hypothesis library) for every hand-rolled evaluator: e.g. for Łukasiewicz, verify ¬¬φ = φ for all φ ∈ {0, 0.5, 1}, double-negation fails for intermediate values in FDE, etc.
+Cross-notebook regression suite: fix a set of canonical scenarios (contradictory sensor reports, medical triage, sealed-bid auction) and assert that the logic-specific evaluators give the same outputs as notebook 03 after any refactor.
+LLM-in-the-loop variant: replace the hand-rolled evaluators with LLM calls that are prompted to reason in the target logic, then compare outputs to the ground-truth hand-rolled results. Measures how well current LLMs internalise non-classical semantics.
+Ablation on pipeline stage order (notebook 06/07): permute the order of stages and measure how many test traces change outcome. Identifies which stages are truly order-independent and which have hidden dependencies.
+
 ## License
 
 MIT
