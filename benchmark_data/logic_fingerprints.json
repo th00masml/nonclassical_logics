@@ -1,0 +1,86 @@
+{
+  "fingerprints": {
+    "claude-sonnet-4-5": {
+      "classical": 75.0,
+      "intuitionistic": 58.3,
+      "paraconsistent": 66.7,
+      "relevance": 33.3
+    }
+  },
+  "per_item_match": {
+    "claude-sonnet-4-5": {
+      "LEM-01": {
+        "classical": true,
+        "intuitionistic": false,
+        "paraconsistent": true,
+        "relevance": true
+      },
+      "LEM-02": {
+        "classical": false,
+        "intuitionistic": true,
+        "paraconsistent": false,
+        "relevance": false
+      },
+      "DNE-01": {
+        "classical": true,
+        "intuitionistic": false,
+        "paraconsistent": true,
+        "relevance": true
+      },
+      "DNE-02": {
+        "classical": true,
+        "intuitionistic": false,
+        "paraconsistent": true,
+        "relevance": true
+      },
+      "EFQ-01": {
+        "classical": true,
+        "intuitionistic": true,
+        "paraconsistent": false,
+        "relevance": false
+      },
+      "EFQ-02": {
+        "classical": false,
+        "intuitionistic": false,
+        "paraconsistent": true,
+        "relevance": true
+      },
+      "REL-01": {
+        "classical": true,
+        "intuitionistic": true,
+        "paraconsistent": true,
+        "relevance": false
+      },
+      "REL-02": {
+        "classical": true,
+        "intuitionistic": true,
+        "paraconsistent": true,
+        "relevance": false
+      },
+      "DS-01": {
+        "classical": true,
+        "intuitionistic": true,
+        "paraconsistent": false,
+        "relevance": false
+      },
+      "CON-01": {
+        "classical": false,
+        "intuitionistic": true,
+        "paraconsistent": false,
+        "relevance": false
+      },
+      "PEI-01": {
+        "classical": true,
+        "intuitionistic": false,
+        "paraconsistent": true,
+        "relevance": false
+      },
+      "MAT-01": {
+        "classical": true,
+        "intuitionistic": true,
+        "paraconsistent": true,
+        "relevance": false
+      }
+    }
+  }
+}

@@ -1,0 +1,197 @@
+[
+  {
+    "id": "LEM-01",
+    "category": "LEM",
+    "premises": [
+      "There exists either a largest twin prime or there does not."
+    ],
+    "conclusion": "The disjunction 'there is a largest twin prime, or there is not' is true.",
+    "formal": "⊢ φ ∨ ¬φ",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "does_not_entail",
+      "paraconsistent": "entails",
+      "relevance": "entails"
+    },
+    "explanation": "Intuitionism rejects LEM without a constructive witness."
+  },
+  {
+    "id": "LEM-02",
+    "category": "LEM",
+    "premises": [
+      "Either Goldbach's conjecture is true, or it is false."
+    ],
+    "conclusion": "This is a logical truth.",
+    "formal": "⊢ φ ∨ ¬φ",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "does_not_entail",
+      "paraconsistent": "entails",
+      "relevance": "entails"
+    },
+    "explanation": "Same LEM pattern, different framing."
+  },
+  {
+    "id": "DNE-01",
+    "category": "DNE",
+    "premises": [
+      "It is not the case that the function f has no zero."
+    ],
+    "conclusion": "f has a zero.",
+    "formal": "¬¬φ ⊢ φ",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "does_not_entail",
+      "paraconsistent": "entails",
+      "relevance": "entails"
+    },
+    "explanation": "Intuitionism: ¬¬φ doesn't constructively give φ."
+  },
+  {
+    "id": "DNE-02",
+    "category": "DNE",
+    "premises": [
+      "It is not the case that no winning strategy exists for player A."
+    ],
+    "conclusion": "Player A has a winning strategy.",
+    "formal": "¬¬∃x.W(x) ⊢ ∃x.W(x)",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "does_not_entail",
+      "paraconsistent": "entails",
+      "relevance": "entails"
+    },
+    "explanation": "Constructive existence requires a witness."
+  },
+  {
+    "id": "EFQ-01",
+    "category": "EFQ",
+    "premises": [
+      "The Earth is round.",
+      "The Earth is not round."
+    ],
+    "conclusion": "The moon is made of cheese.",
+    "formal": "φ, ¬φ ⊢ ψ",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "entails",
+      "paraconsistent": "does_not_entail",
+      "relevance": "does_not_entail"
+    },
+    "explanation": "Paraconsistent and relevance logics block explosion."
+  },
+  {
+    "id": "EFQ-02",
+    "category": "EFQ",
+    "premises": [
+      "All swans are white.",
+      "There exists a black swan."
+    ],
+    "conclusion": "All cars are blue.",
+    "formal": "φ, ¬φ ⊢ ψ",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "entails",
+      "paraconsistent": "does_not_entail",
+      "relevance": "does_not_entail"
+    },
+    "explanation": "Contradiction about swans does not bear on cars."
+  },
+  {
+    "id": "REL-01",
+    "category": "relevance",
+    "premises": [
+      "It is raining."
+    ],
+    "conclusion": "If 2+2=5, then it is raining.",
+    "formal": "φ ⊢ ψ → φ",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "entails",
+      "paraconsistent": "entails",
+      "relevance": "does_not_entail"
+    },
+    "explanation": "Relevance: antecedent must be relevant to consequent."
+  },
+  {
+    "id": "REL-02",
+    "category": "relevance",
+    "premises": [
+      "Paris is the capital of France."
+    ],
+    "conclusion": "If the moon is square, then Paris is the capital of France.",
+    "formal": "φ ⊢ ψ → φ",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "entails",
+      "paraconsistent": "entails",
+      "relevance": "does_not_entail"
+    },
+    "explanation": "Vacuous conditional only valid in classical/intuitionistic."
+  },
+  {
+    "id": "DS-01",
+    "category": "disjunctive_syllogism",
+    "premises": [
+      "Either Anna or Bob committed the crime.",
+      "Anna did not commit the crime."
+    ],
+    "conclusion": "Bob committed the crime.",
+    "formal": "φ ∨ ψ, ¬φ ⊢ ψ",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "entails",
+      "paraconsistent": "does_not_entail",
+      "relevance": "does_not_entail"
+    },
+    "explanation": "In LP, ¬φ alone doesn't eliminate φ from the disjunction."
+  },
+  {
+    "id": "CON-01",
+    "category": "constructive_witness",
+    "premises": [
+      "It would be contradictory if no real number squared to 2."
+    ],
+    "conclusion": "There is a real number whose square is 2.",
+    "formal": "¬¬∃x.φ(x) ⊢ ∃x.φ(x)",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "does_not_entail",
+      "paraconsistent": "entails",
+      "relevance": "entails"
+    },
+    "explanation": "Classical proof of existence by contradiction; not constructive."
+  },
+  {
+    "id": "PEI-01",
+    "category": "Peirce",
+    "premises": [
+      "If 'if it rains then I get wet' implies it rains, then it rains."
+    ],
+    "conclusion": "This is a logical tautology.",
+    "formal": "⊢ ((φ → ψ) → φ) → φ",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "does_not_entail",
+      "paraconsistent": "entails",
+      "relevance": "does_not_entail"
+    },
+    "explanation": "Peirce's law fails in IL and most relevance logics."
+  },
+  {
+    "id": "MAT-01",
+    "category": "material_implication",
+    "premises": [
+      "If the moon is made of cheese, then 2+2=4."
+    ],
+    "conclusion": "This conditional is true.",
+    "formal": "⊢ φ → ψ where ¬φ",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "entails",
+      "paraconsistent": "entails",
+      "relevance": "does_not_entail"
+    },
+    "explanation": "Vacuous truth from false antecedent; relevance rejects."
+  }
+]
