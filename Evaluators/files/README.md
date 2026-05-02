@@ -21,8 +21,12 @@ Based on the analysis across all notebooks (01-11), the project reveals several 
 - **Relevance Awareness**: LLMs frequently reject irrelevant or vacuous implications, indicating an underlying sensitivity to relevance logic principles.
 - **Scale and Consistency**: Larger models exhibit more stable logic fingerprints, while smaller ones show higher variability, supporting the hypothesis that model scale contributes to logical coherence.
 - **Priming Potential**: Logic fingerprints can be influenced by prompts, opening possibilities for controllable logical behavior in LLMs.
-- **Agent Communication Insights**: Notebooks on agent communication (01-08) highlight how non-classical logics can enhance multi-agent interactions, reducing paradoxes and improving robustness.
-- **Benchmark Limitations**: Current benchmarks are small-scale; expanding to 50+ items per logic with paraphrases and cross-language testing is recommended for robust conclusions.
+- **Agent Communication Insights**: Notebooks on agent communication (01-08) highlight how non-classical logics can enhance multi-agent interactions, reducing paradoxes and improving robustness in scenarios involving uncertainty or incomplete information.
+- **Benchmark Limitations and Recommendations**: Current benchmarks are small-scale (~12 items); expanding to 50+ items per logic with multiple paraphrases, prompt-stability tests, and cross-language evaluations (e.g., Polish/Mandarin) is essential for generalizable results.
+- **Chain-of-Thought Analysis**: Encouraging step-by-step reasoning in LLMs reveals traces of logical moves (e.g., avoiding LEM in intuitionistic contexts), providing deeper insights into implicit logical frameworks.
+- **Cross-Logic Composition**: Combining results from notebook 03's formal evaluators with LLM benchmarks shows discrepancies, suggesting LLMs do not fully emulate formal logics but approximate them heuristically.
+- **Implications for AI Development**: These findings suggest designing AI systems with explicit logical priming to tailor behavior for specific domains, such as paraconsistent reasoning for error-tolerant applications or relevance logic for focused inference.
+- **Future Directions**: Investigate logic priming across languages, integrate with tools like LangGraph (notebook 07w), and explore modal logics for temporal or epistemic reasoning in LLMs.
 
 ## Structure
 
