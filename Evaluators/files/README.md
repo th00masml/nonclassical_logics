@@ -2,6 +2,16 @@
 
 Evaluates LLMs on 70 scenarios across 7 non-classical logics.
 
+## Project Overview
+
+This repository explores how Large Language Models (LLMs) handle non-classical logics, including intuitionistic, paraconsistent, relevance, and modal logics. The project includes:
+
+- **Notebooks (01-11)**: Step-by-step analysis, from basics of agent communication to advanced benchmarks and logic fingerprinting.
+- **Benchmark Data**: Scenarios, responses, and evaluation results in JSON/MD formats.
+- **Evaluators**: Automated tools for running benchmarks and generating reports.
+
+Key insights: LLMs often default to classical logic but show biases towards paraconsistent reasoning (e.g., resisting explosion) and relevance awareness.
+
 ## Structure
 
 ```
@@ -48,6 +58,12 @@ replace `score_result()` in `evaluator.py` with one of:
 
 - **LLM-as-judge**: pass (model_output, correct_answer) to GPT-4 / Claude
 - **Human annotation**: export results CSV, annotate manually
+
+## Related Notebooks
+
+- **09_llm_logic_benchmark.ipynb**: Full benchmark execution and results visualization.
+- **10_llm_logic_router_eval.ipynb**: Evaluation of logic routing in LLMs.
+- **11_llm_logic_fingerprint.ipynb**: Logic fingerprint analysis — hypotheses, conclusions, and observations on LLM logical behavior.
 - **Formal verifier**: for LTL/DS scenarios, add domain-specific checkers
 
 ## Metrics
