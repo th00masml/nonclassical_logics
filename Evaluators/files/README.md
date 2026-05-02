@@ -12,6 +12,18 @@ This repository explores how Large Language Models (LLMs) handle non-classical l
 
 Key insights: LLMs often default to classical logic but show biases towards paraconsistent reasoning (e.g., resisting explosion) and relevance awareness.
 
+## General Conclusions
+
+Based on the analysis across all notebooks (01-11), the project reveals several expanded insights into how LLMs handle non-classical logics:
+
+- **Dominance of Classical Defaults**: Most LLMs align with classical logic as a baseline, providing truth-functional reasoning, but deviations occur in specific scenarios like contradictions and vacuous conditionals.
+- **Paraconsistent Tendencies**: Consistent rejection of ex falso quodlibet (EFQ) across models suggests implicit paraconsistent logic, where contradictions do not lead to arbitrary conclusions.
+- **Relevance Awareness**: LLMs frequently reject irrelevant or vacuous implications, indicating an underlying sensitivity to relevance logic principles.
+- **Scale and Consistency**: Larger models exhibit more stable logic fingerprints, while smaller ones show higher variability, supporting the hypothesis that model scale contributes to logical coherence.
+- **Priming Potential**: Logic fingerprints can be influenced by prompts, opening possibilities for controllable logical behavior in LLMs.
+- **Agent Communication Insights**: Notebooks on agent communication (01-08) highlight how non-classical logics can enhance multi-agent interactions, reducing paradoxes and improving robustness.
+- **Benchmark Limitations**: Current benchmarks are small-scale; expanding to 50+ items per logic with paraphrases and cross-language testing is recommended for robust conclusions.
+
 ## Structure
 
 ```
@@ -61,6 +73,14 @@ replace `score_result()` in `evaluator.py` with one of:
 
 ## Related Notebooks
 
+- **01_nonclassical_agent_comm_basics.ipynb**: Basics of agent communication in non-classical logics.
+- **02_nonclassical_agent_comm_advanced.ipynb**: Advanced concepts in agent communication.
+- **03_nonclassical_agent_comm_synthesis.ipynb**: Synthesis of communication strategies.
+- **04_nonclassical_agent_comm_applications.ipynb**: Practical applications of agent communication.
+- **05_nonclassical_agent_comm_language.ipynb**: Language aspects in non-classical agent communication.
+- **06_nonclassical_agent_comm_workflow.ipynb**: Workflow for agent communication.
+- **07w_nonclassical_agent_comm_langgraph.ipynb**: LangGraph integration for agent communication.
+- **08_nonclassical_agent_comm_experimental_composition.ipynb**: Experimental composition techniques.
 - **09_llm_logic_benchmark.ipynb**: Full benchmark execution and results visualization.
 - **10_llm_logic_router_eval.ipynb**: Evaluation of logic routing in LLMs.
 - **11_llm_logic_fingerprint.ipynb**: Logic fingerprint analysis — hypotheses, conclusions, and observations on LLM logical behavior.
