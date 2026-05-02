@@ -335,7 +335,7 @@ Please open an issue or PR with your proposal.
 
 ## License
 
-[Specify license]
+MIT License
 
 ## Contact
 
