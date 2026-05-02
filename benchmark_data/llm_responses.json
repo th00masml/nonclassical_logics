@@ -1,0 +1,542 @@
+[
+  {
+    "model": "claude-sonnet-4-5",
+    "item_id": "LEM-01",
+    "category": "LEM",
+    "trial": 0,
+    "verdict": "entails",
+    "confidence": 5,
+    "reasoning": "The premise explicitly states that either a largest twin prime exists or does not exist, which is logically identical to the conclusion's disjunction. This is a straightforward case where the premise and conclusion express the same logical content.",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "does_not_entail",
+      "paraconsistent": "entails",
+      "relevance": "entails"
+    }
+  },
+  {
+    "model": "claude-sonnet-4-5",
+    "item_id": "LEM-01",
+    "category": "LEM",
+    "trial": 1,
+    "verdict": "entails",
+    "confidence": 5,
+    "reasoning": "The premise directly states that either a largest twin prime exists or it does not, which is logically identical to the conclusion's disjunction. This is a straightforward case where the premise and conclusion express the same logical content.",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "does_not_entail",
+      "paraconsistent": "entails",
+      "relevance": "entails"
+    }
+  },
+  {
+    "model": "claude-sonnet-4-5",
+    "item_id": "LEM-01",
+    "category": "LEM",
+    "trial": 2,
+    "verdict": "entails",
+    "confidence": 5,
+    "reasoning": "The premise directly states that either a largest twin prime exists or it does not, which is logically identical to the conclusion that the disjunction 'there is a largest twin prime, or there is not' is true. This is a straightforward case where the premise and conclusion express the same logical content.",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "does_not_entail",
+      "paraconsistent": "entails",
+      "relevance": "entails"
+    }
+  },
+  {
+    "model": "claude-sonnet-4-5",
+    "item_id": "LEM-02",
+    "category": "LEM",
+    "trial": 0,
+    "verdict": "does_not_entail",
+    "confidence": 4,
+    "reasoning": "The premise 'Either Goldbach's conjecture is true, or it is false' is itself a logical truth (an instance of the law of excluded middle), but the conclusion 'This is a logical truth' does not logically follow from the premise—it is a meta-logical statement about the premise itself. The premise doesn't entail its own meta-logical status through logical inference.",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "does_not_entail",
+      "paraconsistent": "entails",
+      "relevance": "entails"
+    }
+  },
+  {
+    "model": "claude-sonnet-4-5",
+    "item_id": "LEM-02",
+    "category": "LEM",
+    "trial": 1,
+    "verdict": "does_not_entail",
+    "confidence": 4,
+    "reasoning": "The premise 'Either Goldbach's conjecture is true, or it is false' is itself a logical truth (an instance of the law of excluded middle), but the conclusion 'This is a logical truth' doesn't logically follow from the premise in the formal sense—it's a meta-logical statement about the premise rather than a conclusion derived from it. The relationship is descriptive rather than inferential.",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "does_not_entail",
+      "paraconsistent": "entails",
+      "relevance": "entails"
+    }
+  },
+  {
+    "model": "claude-sonnet-4-5",
+    "item_id": "LEM-02",
+    "category": "LEM",
+    "trial": 2,
+    "verdict": "does_not_entail",
+    "confidence": 4,
+    "reasoning": "The premise states an instance of the law of excluded middle (P ∨ ¬P), which is itself a logical truth. However, the conclusion 'This is a logical truth' appears to be a meta-level claim about the premise rather than a logical consequence derived from it. The premise doesn't entail the conclusion through logical inference rules, even though the premise happens to be a logical truth.",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "does_not_entail",
+      "paraconsistent": "entails",
+      "relevance": "entails"
+    }
+  },
+  {
+    "model": "claude-sonnet-4-5",
+    "item_id": "DNE-01",
+    "category": "DNE",
+    "trial": 0,
+    "verdict": "entails",
+    "confidence": 5,
+    "reasoning": "The premise states 'it is not the case that f has no zero,' which is a double negation. By the law of double negation, not(not P) is logically equivalent to P, so 'not(f has no zero)' is equivalent to 'f has a zero.'",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "does_not_entail",
+      "paraconsistent": "entails",
+      "relevance": "entails"
+    }
+  },
+  {
+    "model": "claude-sonnet-4-5",
+    "item_id": "DNE-01",
+    "category": "DNE",
+    "trial": 1,
+    "verdict": "entails",
+    "confidence": 5,
+    "reasoning": "The premise states 'It is not the case that the function f has no zero,' which is logically equivalent to ¬(¬(f has a zero)). By double negation elimination, this directly entails that 'f has a zero.'",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "does_not_entail",
+      "paraconsistent": "entails",
+      "relevance": "entails"
+    }
+  },
+  {
+    "model": "claude-sonnet-4-5",
+    "item_id": "DNE-01",
+    "category": "DNE",
+    "trial": 2,
+    "verdict": "entails",
+    "confidence": 5,
+    "reasoning": "The premise states 'It is not the case that f has no zero,' which is logically equivalent to negating 'f has no zero.' By the law of double negation, this directly entails 'f has a zero.'",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "does_not_entail",
+      "paraconsistent": "entails",
+      "relevance": "entails"
+    }
+  },
+  {
+    "model": "claude-sonnet-4-5",
+    "item_id": "DNE-02",
+    "category": "DNE",
+    "trial": 0,
+    "verdict": "entails",
+    "confidence": 5,
+    "reasoning": "The premise states 'It is not the case that no winning strategy exists for player A,' which is a double negation. By the law of double negation elimination, this is logically equivalent to 'A winning strategy exists for player A,' which means the same as 'Player A has a winning strategy.'",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "does_not_entail",
+      "paraconsistent": "entails",
+      "relevance": "entails"
+    }
+  },
+  {
+    "model": "claude-sonnet-4-5",
+    "item_id": "DNE-02",
+    "category": "DNE",
+    "trial": 1,
+    "verdict": "entails",
+    "confidence": 5,
+    "reasoning": "The premise states 'it is not the case that no winning strategy exists,' which is a double negation. By the law of double negation elimination, this is logically equivalent to 'a winning strategy exists for player A,' which is the conclusion.",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "does_not_entail",
+      "paraconsistent": "entails",
+      "relevance": "entails"
+    }
+  },
+  {
+    "model": "claude-sonnet-4-5",
+    "item_id": "DNE-02",
+    "category": "DNE",
+    "trial": 2,
+    "verdict": "entails",
+    "confidence": 5,
+    "reasoning": "The premise states 'It is not the case that no winning strategy exists for player A,' which is a double negation equivalent to 'A winning strategy exists for player A.' This is logically equivalent to the conclusion 'Player A has a winning strategy.'",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "does_not_entail",
+      "paraconsistent": "entails",
+      "relevance": "entails"
+    }
+  },
+  {
+    "model": "claude-sonnet-4-5",
+    "item_id": "EFQ-01",
+    "category": "EFQ",
+    "trial": 0,
+    "verdict": "entails",
+    "confidence": 5,
+    "reasoning": "The premises are contradictory, forming a logical contradiction. In classical logic, from a contradiction, anything follows (principle of explosion), so the conclusion is vacuously entailed.",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "entails",
+      "paraconsistent": "does_not_entail",
+      "relevance": "does_not_entail"
+    }
+  },
+  {
+    "model": "claude-sonnet-4-5",
+    "item_id": "EFQ-01",
+    "category": "EFQ",
+    "trial": 1,
+    "verdict": "entails",
+    "confidence": 5,
+    "reasoning": "The premises are contradictory, creating a logical contradiction. In classical logic, from a contradiction, anything follows (principle of explosion or 'ex falso quodlibet'), so any conclusion, including that the moon is made of cheese, is logically entailed.",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "entails",
+      "paraconsistent": "does_not_entail",
+      "relevance": "does_not_entail"
+    }
+  },
+  {
+    "model": "claude-sonnet-4-5",
+    "item_id": "EFQ-01",
+    "category": "EFQ",
+    "trial": 2,
+    "verdict": "entails",
+    "confidence": 5,
+    "reasoning": "The premises are contradictory, creating a logical explosion (principle of explosion). In classical logic, from a contradiction, any conclusion whatsoever follows, including that the moon is made of cheese.",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "entails",
+      "paraconsistent": "does_not_entail",
+      "relevance": "does_not_entail"
+    }
+  },
+  {
+    "model": "claude-sonnet-4-5",
+    "item_id": "EFQ-02",
+    "category": "EFQ",
+    "trial": 0,
+    "verdict": "does_not_entail",
+    "confidence": 5,
+    "reasoning": "The conclusion about cars being blue has no logical connection to the premises about swans. Additionally, the premises are contradictory (claiming all swans are white while also stating a black swan exists), but even from a contradiction, this particular conclusion about cars doesn't follow as it introduces entirely unrelated subject matter.",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "entails",
+      "paraconsistent": "does_not_entail",
+      "relevance": "does_not_entail"
+    }
+  },
+  {
+    "model": "claude-sonnet-4-5",
+    "item_id": "EFQ-02",
+    "category": "EFQ",
+    "trial": 1,
+    "verdict": "does_not_entail",
+    "confidence": 5,
+    "reasoning": "The conclusion about cars being blue has no logical connection to the premises about swans. Additionally, the premises are contradictory (all swans are white vs. a black swan exists), but even from contradictory premises, the conclusion about cars doesn't follow by any logical inference rule.",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "entails",
+      "paraconsistent": "does_not_entail",
+      "relevance": "does_not_entail"
+    }
+  },
+  {
+    "model": "claude-sonnet-4-5",
+    "item_id": "EFQ-02",
+    "category": "EFQ",
+    "trial": 2,
+    "verdict": "does_not_entail",
+    "confidence": 5,
+    "reasoning": "The conclusion about cars being blue is completely unrelated to the premises about swans. Additionally, the premises are contradictory (claiming all swans are white while also stating a black swan exists), but even from contradictory premises, the conclusion about cars does not follow as it introduces entirely new subject matter.",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "entails",
+      "paraconsistent": "does_not_entail",
+      "relevance": "does_not_entail"
+    }
+  },
+  {
+    "model": "claude-sonnet-4-5",
+    "item_id": "REL-01",
+    "category": "relevance",
+    "trial": 0,
+    "verdict": "entails",
+    "confidence": 5,
+    "reasoning": "The conclusion is a conditional statement 'If P then Q' where Q is 'it is raining'. In classical logic, a conditional with a true consequent is always true, regardless of whether the antecedent is true or false. Since the premise establishes that 'it is raining' is true, the conditional 'If 2+2=5, then it is raining' must be true.",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "entails",
+      "paraconsistent": "entails",
+      "relevance": "does_not_entail"
+    }
+  },
+  {
+    "model": "claude-sonnet-4-5",
+    "item_id": "REL-01",
+    "category": "relevance",
+    "trial": 1,
+    "verdict": "entails",
+    "confidence": 5,
+    "reasoning": "The conclusion is a material conditional 'If P then Q' where Q (it is raining) is true according to the premise. In classical logic, a material conditional is true whenever the consequent is true, regardless of the antecedent's truth value. Therefore, the conclusion logically follows from the premise that it is raining.",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "entails",
+      "paraconsistent": "entails",
+      "relevance": "does_not_entail"
+    }
+  },
+  {
+    "model": "claude-sonnet-4-5",
+    "item_id": "REL-01",
+    "category": "relevance",
+    "trial": 2,
+    "verdict": "entails",
+    "confidence": 5,
+    "reasoning": "The conclusion is a material conditional 'If P then Q' where Q ('it is raining') is true according to the premise. In classical logic, a material conditional is true whenever the consequent is true, regardless of the antecedent's truth value. Therefore, the conclusion logically follows from the premise.",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "entails",
+      "paraconsistent": "entails",
+      "relevance": "does_not_entail"
+    }
+  },
+  {
+    "model": "claude-sonnet-4-5",
+    "item_id": "REL-02",
+    "category": "relevance",
+    "trial": 0,
+    "verdict": "entails",
+    "confidence": 5,
+    "reasoning": "In classical logic, a material conditional 'If P then Q' is true whenever Q is true, regardless of whether P is true or false. Since the premise establishes that Paris is the capital of France (Q is true), the conditional 'If the moon is square, then Paris is the capital of France' must be true.",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "entails",
+      "paraconsistent": "entails",
+      "relevance": "does_not_entail"
+    }
+  },
+  {
+    "model": "claude-sonnet-4-5",
+    "item_id": "REL-02",
+    "category": "relevance",
+    "trial": 1,
+    "verdict": "entails",
+    "confidence": 5,
+    "reasoning": "The conclusion is a material conditional where the consequent 'Paris is the capital of France' is true according to the premise. In classical logic, a material conditional is true whenever its consequent is true, regardless of the truth value of the antecedent.",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "entails",
+      "paraconsistent": "entails",
+      "relevance": "does_not_entail"
+    }
+  },
+  {
+    "model": "claude-sonnet-4-5",
+    "item_id": "REL-02",
+    "category": "relevance",
+    "trial": 2,
+    "verdict": "entails",
+    "confidence": 5,
+    "reasoning": "In classical logic, a conditional statement 'if P then Q' is true whenever Q is true, regardless of whether P is true or false. Since the premise establishes that Paris is the capital of France (Q is true), the conditional statement follows logically even though the antecedent (the moon is square) is false.",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "entails",
+      "paraconsistent": "entails",
+      "relevance": "does_not_entail"
+    }
+  },
+  {
+    "model": "claude-sonnet-4-5",
+    "item_id": "DS-01",
+    "category": "disjunctive_syllogism",
+    "trial": 0,
+    "verdict": "entails",
+    "confidence": 5,
+    "reasoning": "This is a valid application of disjunctive syllogism. Given that either Anna or Bob committed the crime, and Anna did not commit it, it logically follows that Bob must have committed the crime.",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "entails",
+      "paraconsistent": "does_not_entail",
+      "relevance": "does_not_entail"
+    }
+  },
+  {
+    "model": "claude-sonnet-4-5",
+    "item_id": "DS-01",
+    "category": "disjunctive_syllogism",
+    "trial": 1,
+    "verdict": "entails",
+    "confidence": 5,
+    "reasoning": "This is a valid application of disjunctive syllogism: given that either Anna or Bob committed the crime (A ∨ B), and Anna did not commit the crime (¬A), it logically follows that Bob committed the crime (B).",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "entails",
+      "paraconsistent": "does_not_entail",
+      "relevance": "does_not_entail"
+    }
+  },
+  {
+    "model": "claude-sonnet-4-5",
+    "item_id": "DS-01",
+    "category": "disjunctive_syllogism",
+    "trial": 2,
+    "verdict": "entails",
+    "confidence": 5,
+    "reasoning": "This is a valid disjunctive syllogism. Given that either Anna or Bob committed the crime, and Anna did not commit it, it logically follows that Bob must have committed the crime.",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "entails",
+      "paraconsistent": "does_not_entail",
+      "relevance": "does_not_entail"
+    }
+  },
+  {
+    "model": "claude-sonnet-4-5",
+    "item_id": "CON-01",
+    "category": "constructive_witness",
+    "trial": 0,
+    "verdict": "does_not_entail",
+    "confidence": 4,
+    "reasoning": "The premise states it would be contradictory if no real number squared to 2, but this alone doesn't establish that there actually is such a number. A logical entailment would require additional premises about what follows from something being contradictory, such as the principle that contradictions are impossible or false.",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "does_not_entail",
+      "paraconsistent": "entails",
+      "relevance": "entails"
+    }
+  },
+  {
+    "model": "claude-sonnet-4-5",
+    "item_id": "CON-01",
+    "category": "constructive_witness",
+    "trial": 1,
+    "verdict": "does_not_entail",
+    "confidence": 4,
+    "reasoning": "The premise states it would be contradictory if no real number squared to 2, but doesn't specify what it would contradict. Without knowing what system or axioms would be contradicted, we cannot logically derive that such a number must exist—the premise could be a counterfactual statement about a hypothetical situation rather than an assertion about reality.",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "does_not_entail",
+      "paraconsistent": "entails",
+      "relevance": "entails"
+    }
+  },
+  {
+    "model": "claude-sonnet-4-5",
+    "item_id": "CON-01",
+    "category": "constructive_witness",
+    "trial": 2,
+    "verdict": "does_not_entail",
+    "confidence": 4,
+    "reasoning": "The premise states it would be contradictory if no real number squared to 2, but this alone doesn't establish that there actually is such a real number. The premise identifies what would be problematic without asserting the existence claim needed for the conclusion, unless we assume mathematics must be non-contradictory.",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "does_not_entail",
+      "paraconsistent": "entails",
+      "relevance": "entails"
+    }
+  },
+  {
+    "model": "claude-sonnet-4-5",
+    "item_id": "PEI-01",
+    "category": "Peirce",
+    "trial": 0,
+    "verdict": "entails",
+    "confidence": 5,
+    "reasoning": "The premise has the form '((P → Q) → P) → P', which is Peirce's Law, a well-known logical tautology in classical logic. Since the premise is itself a tautology, the conclusion that it is a logical tautology necessarily follows.",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "does_not_entail",
+      "paraconsistent": "entails",
+      "relevance": "does_not_entail"
+    }
+  },
+  {
+    "model": "claude-sonnet-4-5",
+    "item_id": "PEI-01",
+    "category": "Peirce",
+    "trial": 1,
+    "verdict": "does_not_entail",
+    "confidence": 4,
+    "reasoning": "The premise describes a specific conditional statement about rain and getting wet, which is not a tautology itself. While the structure '(P→Q)→P)→P' is indeed a tautology (a theorem in propositional logic), the premise alone does not establish that this particular statement is a logical tautology without additional logical analysis that goes beyond what the premise explicitly states.",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "does_not_entail",
+      "paraconsistent": "entails",
+      "relevance": "does_not_entail"
+    }
+  },
+  {
+    "model": "claude-sonnet-4-5",
+    "item_id": "PEI-01",
+    "category": "Peirce",
+    "trial": 2,
+    "verdict": "entails",
+    "confidence": 5,
+    "reasoning": "The premise has the form '((P → Q) → P) → P', which is Peirce's Law, a well-known logical tautology. Since the premise itself is a tautology, the conclusion that it is a logical tautology correctly follows.",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "does_not_entail",
+      "paraconsistent": "entails",
+      "relevance": "does_not_entail"
+    }
+  },
+  {
+    "model": "claude-sonnet-4-5",
+    "item_id": "MAT-01",
+    "category": "material_implication",
+    "trial": 0,
+    "verdict": "entails",
+    "confidence": 5,
+    "reasoning": "The conditional 'If the moon is made of cheese, then 2+2=4' is true because it has a false antecedent and a true consequent, which makes the entire conditional true by the standard truth conditions for material conditionals. Therefore, the conclusion that this conditional is true logically follows from the premise.",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "entails",
+      "paraconsistent": "entails",
+      "relevance": "does_not_entail"
+    }
+  },
+  {
+    "model": "claude-sonnet-4-5",
+    "item_id": "MAT-01",
+    "category": "material_implication",
+    "trial": 1,
+    "verdict": "entails",
+    "confidence": 5,
+    "reasoning": "The conditional 'If the moon is made of cheese, then 2+2=4' is true because it has a false antecedent (the moon is not made of cheese) and a true consequent (2+2=4). A conditional with a false antecedent is always true in classical logic, regardless of the consequent's truth value.",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "entails",
+      "paraconsistent": "entails",
+      "relevance": "does_not_entail"
+    }
+  },
+  {
+    "model": "claude-sonnet-4-5",
+    "item_id": "MAT-01",
+    "category": "material_implication",
+    "trial": 2,
+    "verdict": "entails",
+    "confidence": 5,
+    "reasoning": "The conditional 'If the moon is made of cheese, then 2+2=4' is true because the consequent (2+2=4) is true, and a material conditional with a true consequent is always true regardless of the truth value of the antecedent. Therefore, the conclusion that this conditional is true logically follows from the premise.",
+    "expected": {
+      "classical": "entails",
+      "intuitionistic": "entails",
+      "paraconsistent": "entails",
+      "relevance": "does_not_entail"
+    }
+  }
+]
