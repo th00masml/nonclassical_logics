@@ -67,6 +67,18 @@ python report.py \
   --output ./results/report.md
 ```
 
+## Remote / Distributed Testing
+
+For remote evaluation on dedicated GPU hosts or cluster nodes:
+
+- Copy the dataset and evaluator files to the remote machine or mount via network storage.
+- Use the same `python evaluator.py` command on the remote host.
+- For large models, prefer remote GPUs or quantized runtimes:
+  - `meta-llama/Meta-Llama-3-70B-Instruct` requires 4×A100 or an 8-bit/4-bit quantized runtime.
+  - `mistralai/Mistral-7B-Instruct-v0.3` works well on a single 24GB GPU.
+- If you need to run multiple models in parallel, use a remote job scheduler or SSH script to launch separate runs.
+- Copy `./results` back to your local machine for reporting and analysis.
+
 ## Scoring
 
 Current scoring is heuristic (keyword overlap). For paper-quality results,
